@@ -6,14 +6,15 @@
 #    By: azeraoul <azeraoul@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/09 13:22:35 by azeraoul          #+#    #+#              #
-#    Updated: 2021/11/09 13:22:35 by azeraoul         ###   ########.fr        #
+#    Updated: 2021/11/16 14:28:39 by azeraoul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:= Bureaucrat
+NAME		:= Form
 CXX			:= clang++
 CXXFLAGS	:= -std=c++98 -Wall -Wextra -Werror
-FILES		:= $(addsuffix .cpp, main Bureaucrat)
+FILES		:= $(addsuffix .cpp, main Form Bureaucrat PresidentialPardonForm \
+				 RobotomyRequestForm ShrubberyCreationForm Intern)
 OBJS		:= $(FILES:.cpp=.o)
 
 .Phony: all re fclean clean

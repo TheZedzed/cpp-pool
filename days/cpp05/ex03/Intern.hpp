@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azeraoul <azeraoul@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 13:22:35 by azeraoul          #+#    #+#             */
-/*   Updated: 2021/11/09 13:22:35 by azeraoul         ###   ########.fr       */
+/*   Created: 2021/11/16 14:28:39 by azeraoul          #+#    #+#             */
+/*   Updated: 2021/11/16 14:28:39 by azeraoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef INTERN_HPP
+# define INTERN_HPP
 
-int	main(void) {
-	try {
-		//Bureaucrat	one("zed", -4);
-		Bureaucrat	two("zed", 5550);
-		Bureaucrat	three("zed", 142);
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
+# include "ShrubberyCreationForm.hpp"
 
-		std::cout << three << std::endl;
-	}
-	catch (std::exception& e) {
-		std::cout << e.what();
-	}
-	return 0;
-}
+class	Intern {
+	public:
+		Intern() {}
+		~Intern() {}
+		Intern(const Intern& org) {*this = org;}
+		Intern&	operator=(const Intern&) {return *this;}
+		Form*	makeForm(const std::string&, const std::string&);
+};
+#endif
